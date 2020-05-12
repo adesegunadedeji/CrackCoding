@@ -4,10 +4,11 @@ public class URLify {
 
     public static char[] replaceSpaces(char [] str, int trueLength) {
         int numberOfSpaces = countOfChar(str, 0, trueLength, ' ');
+        System.out.println(str.length+ " String dot length");
         int newIndex = trueLength - 1 + numberOfSpaces * 2;
+        System.out.println(newIndex);
         //If there is excess space add a null character. This should indicate that the spaces after that point have not been
         //replaces with %20;
-
         if(newIndex + 1 < str.length)
             str[newIndex+1] = '\0';
 
